@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  /* background-image: linear-gradient(oklch(0.21 0.006 285.885) 0%, oklch(0.141 0.005 285.823) 100%); */
+  /* min-height: 100vh; */
+  background-color: rgb(10, 10, 10);
+
+  padding-top: 96px;
+  padding-left: 16px;
+  padding-right: 16px;
+}

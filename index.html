@@ -7,6 +7,13 @@
 
   <!-- Load CSS File/s -->
   <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/components/header.css">
+
+  <!-- Load Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images//favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images//favicon-16x16.png">
+  <link rel="manifest" href="assets/images//site.webmanifest">
 
   <!-- Load Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +21,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="app">App</div>
+  <header>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-list-item"><a class="nav-list-item-link buy-link" href="#">Buy Crypto</a></li>
+        <li class="nav-list-item"><a class="nav-list-item-link" href="#">Markets</a></li>
+        <li class="nav-list-item"><a class="nav-list-item-link" href="#">Trade</a></li>
+        <li class="nav-list-item"><a class="nav-list-item-link" href="#">Futures</a></li>
+        <li class="nav-list-item"><a class="nav-list-item-link" href="#">Earn</a></li>
+        <li class="nav-list-item"><a class="nav-list-item-link" href="#">Square</a></li>
+        <!-- <li class="nav-list-item">More</li> -->
+      </ul>
+    </nav>
+    <div class="header-logo-wrapper">
+      <img class="header-logo" src="assets/images/android-chrome-512x512.png" alt="logo">
+      <!-- <div class="header-logo">Crypto &#124; Current</div> -->
+    </div>
+  </header>
+
+  <main class="crypto-container">
+    <div>Data</div>
+  </main>
 
   <script type="module" src="scripts/index.js"></script>
 </body>
