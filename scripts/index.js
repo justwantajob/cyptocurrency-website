@@ -1,5 +1,7 @@
 import { formatTime } from './utils/getTime.js';
 
+fetchCryptoData();
+
 async function fetchCryptoData() {
   // let cryptoInfoHTML = '';
   // const cryptoInfoList = document.querySelector('.js-cryptocurrency-info-list');
@@ -23,12 +25,17 @@ async function fetchCryptoData() {
       // `;
 
       const cryptocurrencyTableRow = document.createElement('tr');
+      cryptocurrencyTableRow.classList.add('fade-in');
       cryptocurrencyTableRow.innerHTML += `
         <td><img style="height:16px;" src="${coin.image}">${coin.name}</td>
         <td>${formattedPrice}</td>
       `;
 
       cryptoCurrencyInfoTableBody.appendChild(cryptocurrencyTableRow);
+
+      setTimeout(() => {
+        cryptocurrencyTableRow.classList.add('show');
+      }, 10);
     });
 
     const now = new Date();
@@ -40,11 +47,6 @@ async function fetchCryptoData() {
         </svg>
         Last updated at: ${timeString}
       `;
-
-    document.querySelector('.js-last-update-time-icon')
-      .addEventListener('click', () => {
-        fetchCryptoData();
-      });
   } catch (error) {
     console.log('Error fetching crypto data: ', error);
   }
@@ -52,7 +54,11 @@ async function fetchCryptoData() {
   // cryptoInfoList.innerHTML = cryptoInfoHTML;
 }
 
-fetchCryptoData();
+document.addEventListener('click', (event) => {
+  if (event.target.closest('.js-last-update-time-icon')) {
+    fetchCryptoData();
+  }
+});
 
 // Auto refresh feature
-// setInterval(fetchCryptoData, 60000);
+setInterval(fetchCryptoData, 60000);

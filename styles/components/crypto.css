@@ -94,6 +94,17 @@ td:last-of-type {
   /* font-weight: 200; */
 }
 
+/* related to the tr */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.9s ease-in;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+/* related to the tr */
+
 tr:nth-child(even) {
   background-color: rgba(20, 20, 20, 0.6);
 }
