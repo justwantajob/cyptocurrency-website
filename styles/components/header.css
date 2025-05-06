@@ -57,13 +57,10 @@ header {
   color: rgba(230, 230, 230, 1);
 }
 
-/* .buy-link {
-  color: rgba(255, 174, 0, 0.3);
-  color: rgba(0, 255, 0, 0.3);
-  font-weight: 600;
+.buy-link {
+  color: #f7931a;
 }
 
 .buy-link:hover {
-  color: rgba(255, 174, 0, 1);
-  color: rgba(0, 255, 0, 1);
-} */
+  color: rgba(247,147,26, 0.5);
+}

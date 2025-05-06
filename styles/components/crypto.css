@@ -24,16 +24,43 @@
 }
 
 .cryptocurrency-info-title {
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: rgb(230, 230, 230);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cryptocurrency-info-title svg {
+  width: 24px;
+  height: 24px;
+
+  color: #f7931a;
 }
 
 .last-update-time {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
   font-size: 13px;
-  color: rgba(230, 230, 230, 0.5);
+  color: rgba(230, 230, 230, 0.3);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.last-update-time-icon {
+  width: 16px;
+  height: 16px;
+  color: rgba(230, 230, 230, 0.3);
+
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.last-update-time-icon:hover {
+  color: #f7931a;
 }
 
 .cryptocurrency-info-table {
@@ -50,21 +77,21 @@ th, td {
 
 th {
   color: rgba(230, 230, 230, 1);
-  font-family: 'Lexend', sans-serif;
-  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  /* font-weight: 300; */
   border-bottom: 1px solid rgba(230, 230, 230, 0.1);
 }
 
 td {
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-weight: 200;
+  /* font-weight: 200; */
   border-bottom: 1px solid rgba(230, 230, 230, 0.1);
 }
 
 td:last-of-type {
   color: rgba(230, 230, 230, 0.6);
-  font-weight: 200;
+  /* font-weight: 200; */
 }
 
 tr:nth-child(even) {
