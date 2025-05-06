@@ -1,5 +1,6 @@
-"use strict";
+import { formatTime } from './utils/getTime.js';
 
+"use strict";
 
 async function fetchCryptoData() {
   let cryptoInfoHTML = '';
@@ -30,6 +31,10 @@ async function fetchCryptoData() {
 
       cryptoCurrencyInfoTableBody.appendChild(cryptocurrencyTableRow);
 
+      const now = new Date();
+      const timeString = formatTime(now);
+      document.querySelector('.js-last-update-time')
+        .innerHTML = `Last updated at: ${timeString}`;
     });
   } catch (error) {
     console.log('Error fetching crypto data: ', error);

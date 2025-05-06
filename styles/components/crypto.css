@@ -29,6 +29,13 @@
   color: rgb(230, 230, 230);
 }
 
+.last-update-time {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 13px;
+  color: rgba(230, 230, 230, 0.5);
+}
+
 .cryptocurrency-info-table {
   width: 100%;
   border-collapse: collapse;
@@ -44,16 +51,19 @@ th, td {
 th {
   color: rgba(230, 230, 230, 1);
   font-family: 'Lexend', sans-serif;
+  font-weight: 300;
   border-bottom: 1px solid rgba(230, 230, 230, 0.1);
 }
 
 td {
   color: white;
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
   border-bottom: 1px solid rgba(230, 230, 230, 0.1);
 }
 
 td:last-of-type {
+  color: rgba(230, 230, 230, 0.6);
   font-weight: 200;
 }
 
