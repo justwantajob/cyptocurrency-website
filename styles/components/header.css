@@ -28,13 +28,6 @@ header {
   height: 100%;
 }
 
-/* .header-logo {
-  font-family: 'Lexend', sans-serif;
-  text-transform: uppercase;
-  font-weight: 900;
-  color: rgba(230, 230, 230, 1);
-} */
-
 .nav-list {
   display: flex;
   flex-direction: row;
@@ -47,7 +40,7 @@ header {
 
 .nav-list-item-link {
   text-decoration: none;
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 200;
   color: rgba(230, 230, 230, 0.3);
   transition: color .3s ease;
