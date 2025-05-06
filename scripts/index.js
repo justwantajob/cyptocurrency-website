@@ -3,14 +3,14 @@ import { formatTime } from './utils/getTime.js';
 fetchCryptoData();
 
 async function fetchCryptoData() {
-  // let cryptoInfoHTML = '';
-  // const cryptoInfoList = document.querySelector('.js-cryptocurrency-info-list');
   const cryptoCurrencyInfoTableBody = document.querySelector('.js-cryptocurrency-info-table-body');
   cryptoCurrencyInfoTableBody.innerHTML = '';
 
   try {
     const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd');
     const cryptoCurrencyData = await response.json();
+
+    console.log(cryptoCurrencyData);
 
     cryptoCurrencyData.forEach((coin) => {
       const formattedPrice = coin.current_price.toLocaleString(
@@ -20,15 +20,16 @@ async function fetchCryptoData() {
           currency: 'USD',
         }
       );
-      // cryptoInfoHTML += `
-      //     <li>${coin.name} | $${coin.current_price.toLocaleString()} | <img style="height:16px;" src="${coin.image}"></li>
-      // `;
+
+    const twentyFourHourPriceChange = coin.price_change_percentage_24h?.toFixed(2);
+    const priceChangeColor = twentyFourHourPriceChange >= 0 ? 'green' : 'red';
 
       const cryptocurrencyTableRow = document.createElement('tr');
       cryptocurrencyTableRow.classList.add('fade-in');
       cryptocurrencyTableRow.innerHTML += `
         <td><img style="height:16px;" src="${coin.image}">${coin.name}</td>
         <td>${formattedPrice}</td>
+        <td style="color: ${priceChangeColor};">${twentyFourHourPriceChange}</td>
       `;
 
       cryptoCurrencyInfoTableBody.appendChild(cryptocurrencyTableRow);
@@ -50,8 +51,6 @@ async function fetchCryptoData() {
   } catch (error) {
     console.log('Error fetching crypto data: ', error);
   }
-
-  // cryptoInfoList.innerHTML = cryptoInfoHTML;
 }
 
 document.addEventListener('click', (event) => {

@@ -80,6 +80,7 @@ th {
   font-family: 'Roboto', sans-serif;
   /* font-weight: 300; */
   border-bottom: 1px solid rgba(230, 230, 230, 0.1);
+  pointer-events: none;
 }
 
 td {
@@ -92,6 +93,11 @@ td {
 td:last-of-type {
   color: rgba(230, 230, 230, 0.6);
   /* font-weight: 200; */
+}
+
+tr {
+  transition: background-color .3s ease;
+  cursor: pointer;
 }
 
 /* related to the tr */
@@ -111,6 +117,10 @@ tr:nth-child(even) {
 
 tr:first-child {
   background-color: transparent;
+}
+
+tr:hover {
+  background-color: rgba(230, 230, 230, 0.05);
 }
 
 img {
