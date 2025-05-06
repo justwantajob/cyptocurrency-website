@@ -8,7 +8,7 @@
   <!-- Load CSS File/s -->
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/components/header.css">
-  <link rel="stylesheet" href="styles/components/cryptoCurrency.css">
+  <link rel="stylesheet" href="styles/components/crypto.css">
 
   <!-- Load Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images//apple-touch-icon.png">
@@ -46,14 +46,16 @@
   <!-- MAIN -->
   <main>
     <section class="cryptocurrency-info-container">
-      <h2 class="cryptocurrency-info-title">Cryptocurrency Prices</h2>
+      <div class="cryptocurrency-info-header">
+        <h2 class="cryptocurrency-info-title">Cryptocurrency Prices</h2>
+        <div class="last-update-time"></div>
+      </div>
       <!-- <ul class="cryptocurrency-info-list js-cryptocurrency-info-list"></ul> -->
       <table class="cryptocurrency-info-table js-cryptocurrency-info-table">
         <thead>
           <tr>
             <th>Coin</th>
             <th>Price</th>
-            <th>Symbol</th>
           </tr>
         </thead>
         <tbody class="cryptocurreny-info-table-body js-cryptocurrency-info-table-body">

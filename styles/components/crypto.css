@@ -1,0 +1,71 @@
+/* .cryptocurrency-info-title {
+  font-family: 'Lexend', sans-serif;
+  color: rgb(230, 230, 230);
+}
+
+.cryptocurrency-info-list {
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: rgba(230, 230, 230, 0.3);
+} */
+
+.cryptocurrency-info-container {
+  margin-top: 2rem;
+}
+
+.cryptocurrency-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cryptocurrency-info-title {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  color: rgb(230, 230, 230);
+}
+
+.cryptocurrency-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+th, td {
+  /* border: 1px solid #888; */
+  padding: 16px;
+  text-align: left;
+}
+
+th {
+  color: rgba(230, 230, 230, 1);
+  font-family: 'Lexend', sans-serif;
+  border-bottom: 1px solid rgba(230, 230, 230, 0.1);
+}
+
+td {
+  color: white;
+  font-family: 'Lexend', sans-serif;
+  border-bottom: 1px solid rgba(230, 230, 230, 0.1);
+}
+
+td:last-of-type {
+  font-weight: 200;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(20, 20, 20, 0.6);
+}
+
+tr:first-child {
+  background-color: transparent;
+}
+
+img {
+  vertical-align: middle;
+  margin-right: 8px;
+}

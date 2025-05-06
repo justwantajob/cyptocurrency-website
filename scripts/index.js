@@ -10,7 +10,7 @@ async function fetchCryptoData() {
     const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd');
     const cryptoCurrencyData = await response.json();
 
-    cryptoCurrencyData.slice(0, 10).forEach((coin) => {
+    cryptoCurrencyData.forEach((coin) => {
       const formattedPrice = coin.current_price.toLocaleString(
         'en-US',
         {
@@ -24,9 +24,8 @@ async function fetchCryptoData() {
 
       const cryptocurrencyTableRow = document.createElement('tr');
       cryptocurrencyTableRow.innerHTML += `
-        <td>${coin.name}</td>
+        <td><img style="height:16px;" src="${coin.image}">${coin.name}</td>
         <td>${formattedPrice}</td>
-        <td><img style="height:16px;" src="${coin.image}"></td>
       `;
 
       cryptoCurrencyInfoTableBody.appendChild(cryptocurrencyTableRow);
