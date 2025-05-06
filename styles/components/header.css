@@ -14,13 +14,13 @@ header {
   border: none;
   border-radius: 8px;
 
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .header-logo-wrapper {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 
 .header-logo {
@@ -47,7 +47,7 @@ header {
 
 .nav-list-item-link {
   text-decoration: none;
-  font-family: 'Lexend', monospace;
+  font-family: 'Lexend', sans-serif;
   font-weight: 200;
   color: rgba(230, 230, 230, 0.3);
   transition: color .3s ease;
@@ -57,12 +57,13 @@ header {
   color: rgba(230, 230, 230, 1);
 }
 
-.buy-link {
+/* .buy-link {
   color: rgba(255, 174, 0, 0.3);
-  /* color: rgba(0, 255, 0, 0.3); */
+  color: rgba(0, 255, 0, 0.3);
+  font-weight: 600;
 }
 
 .buy-link:hover {
   color: rgba(255, 174, 0, 1);
-  /* color: rgba(0, 255, 0, 1); */
-}
+  color: rgba(0, 255, 0, 1);
+} */

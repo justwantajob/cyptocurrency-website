@@ -8,6 +8,7 @@
   <!-- Load CSS File/s -->
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/components/header.css">
+  <link rel="stylesheet" href="styles/components/cryptoCurrency.css">
 
   <!-- Load Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images//apple-touch-icon.png">
@@ -21,6 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
     <nav>
       <ul class="nav-list">
@@ -38,10 +41,27 @@
       <!-- <div class="header-logo">Crypto &#124; Current</div> -->
     </div>
   </header>
+  <!-- HEADER -->
 
-  <main class="crypto-container">
-    <div>Data</div>
+  <!-- MAIN -->
+  <main>
+    <section class="cryptocurrency-info-container">
+      <h2 class="cryptocurrency-info-title">Cryptocurrency Prices</h2>
+      <!-- <ul class="cryptocurrency-info-list js-cryptocurrency-info-list"></ul> -->
+      <table class="cryptocurrency-info-table js-cryptocurrency-info-table">
+        <thead>
+          <tr>
+            <th>Coin</th>
+            <th>Price</th>
+            <th>Symbol</th>
+          </tr>
+        </thead>
+        <tbody class="cryptocurreny-info-table-body js-cryptocurrency-info-table-body">
+        </tbody>
+      </table>
+    </section>
   </main>
+  <!-- MAIN -->
 
   <script type="module" src="scripts/index.js"></script>
 </body>
